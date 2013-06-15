@@ -4,14 +4,12 @@
 
 class String #:nodoc
 
-  def permalink
+  def permalinkize
     self.to_ascii.parameterize('-')
   end
 
-  def permalink!
-    replace(self.permalink)
+  def permalinkize!
+    replace(self.permalinkize)
   end
-
-  alias :parameterize! :permalink!
 
 end

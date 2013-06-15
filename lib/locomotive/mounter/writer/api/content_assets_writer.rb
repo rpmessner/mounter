@@ -19,6 +19,7 @@ module Locomotive
 
             # assign an _id to a local content type if possible
             self.get(:content_assets, nil, true).each do |attributes|
+              break unless attributes.kind_of?(Hash)
               self.remote_assets[attributes['full_filename']] = attributes
             end
           end

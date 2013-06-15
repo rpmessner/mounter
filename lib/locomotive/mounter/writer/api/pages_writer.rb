@@ -23,6 +23,7 @@ module Locomotive
 
             # set the unique identifier to each local page
             self.get(:pages, nil, true).each do |attributes|
+              break unless attributes.kind_of?(Hash)
               page = self.pages[attributes['fullpath'].dasherize]
 
               self.remote_translations[attributes['fullpath']] = attributes['translated_in']

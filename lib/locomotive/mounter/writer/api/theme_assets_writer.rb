@@ -30,6 +30,7 @@ module Locomotive
 
             # assign an _id to a local content type if possible
             self.get(:theme_assets, nil, true).each do |attributes|
+              break unless attributes.kind_of?(Hash)
               remote_path = File.join('/', attributes['folder'], File.basename(attributes['local_path']))
 
               if theme_asset = self.theme_assets[remote_path]

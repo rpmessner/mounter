@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
   s.rubyforge_project         = 'locomotivecms_mounter'
 
-  s.add_dependency 'tilt',                            '1.3.3'
-  s.add_dependency 'haml',                            '3.2.0.rc.2'
+  s.add_dependency 'tilt',                            '1.4.1'
+  s.add_dependency 'haml',                            '~> 4.0.2'
   s.add_dependency 'sass',                            '~> 3.2.1'
   s.add_dependency 'compass',                         '~> 0.12.1'
   s.add_dependency 'coffee-script',                   '~> 2.2.0'
@@ -29,9 +29,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'activesupport',                   '~> 3.2.5'
   s.add_dependency 'i18n',                            '~> 0.6.0'
-  s.add_dependency 'stringex',                        '~> 1.4.0'
+  s.add_dependency 'stringex',                        '~> 1.5.1'
 
-  s.add_dependency 'multi_json',                      '~> 1.2.0'
+  s.add_dependency 'multi_json',                      '~> 1.7.3'
   s.add_dependency 'httmultiparty',                   '0.3.8'
   s.add_dependency 'json',                            '~> 1.8.0'
   s.add_dependency 'mime-types',                      '~> 1.19'
@@ -58,4 +58,3 @@ Gem::Specification.new do |s|
 
   s.files        = Dir.glob('lib/**/*')
 end
-

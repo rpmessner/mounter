@@ -237,7 +237,7 @@ module Locomotive
                 self._slug = self.content_type.send(:label_to_slug)
               end
 
-              self._slug.permalink!
+              self._slug.permalinkize!
 
               self._slug = self.next_unique_slug if self.slug_already_taken?
             end

@@ -14,6 +14,7 @@ module Locomotive
 
             # set the unique identifier to each local snippet
             self.get(:snippets, nil, true).each do |attributes|
+              break unless attributes.kind_of?(Hash)
               snippet = self.snippets[attributes['slug']]
 
               snippet._id = attributes['id'] if snippet

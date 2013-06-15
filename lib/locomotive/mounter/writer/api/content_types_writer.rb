@@ -20,6 +20,7 @@ module Locomotive
 
             # assign an _id to a local content type if possible
             self.get(:content_types, nil, true).each do |attributes|
+              break unless attributes.kind_of?(Hash)
               content_type = self.content_types[attributes['slug']]
 
               self.apply_response(content_type, attributes)

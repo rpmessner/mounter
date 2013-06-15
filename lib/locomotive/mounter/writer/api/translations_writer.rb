@@ -15,6 +15,7 @@ module Locomotive
 
             # set the unique identifier to each local translation
             (self.get(:translations, nil, true) || []).each do |attributes|
+              break unless attributes.kind_of?(Hash)
               translation = self.translations[attributes['key']]
 
               translation._id = attributes['id'] if translation
